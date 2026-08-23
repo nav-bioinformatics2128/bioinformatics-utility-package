@@ -1,6 +1,7 @@
 from fasta_utils import read_fasta
 from dna_utils import gc_content
 from dna_utils import reverse_complement
+from dna_utils import validate_dna
 from protein_utils import translate
 
 
@@ -11,16 +12,22 @@ for record in records:
 
     sequence = str(record.seq)
 
-    print(record.id)
+    print("\nID:", record.id)
 
-    print("GC:", gc_content(sequence))
+    if validate_dna(sequence):
 
-    print("Reverse Complement:")
+        print("Valid DNA sequence")
 
-    print(reverse_complement(sequence))
+        print("Length:", len(sequence))
 
-    print("Protein:")
+        print("GC:", gc_content(sequence))
 
-    print(translate(sequence))
+        print("Reverse Complement:")
+        print(reverse_complement(sequence))
 
-    print("-" * 40)
+        print("Protein:")
+        print(translate(sequence))
+
+    else:
+
+        print("Invalid DNA sequence")
