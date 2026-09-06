@@ -8,14 +8,11 @@ codon_table = {
 }
 
 
-def translate(sequence):
-
+def translate(sequence: str) -> str:
     protein = ""
 
-    for i in range(0, len(sequence)-2, 3):
-
-        codon = sequence[i:i+3]
-
+    for i in range(0, len(sequence) - 2, 3):
+        codon = sequence[i:i + 3]
         protein += codon_table.get(codon, "X")
 
     return protein
