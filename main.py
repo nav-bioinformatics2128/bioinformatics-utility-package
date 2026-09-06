@@ -5,7 +5,7 @@ from dna_utils import gc_content
 from dna_utils import reverse_complement
 from dna_utils import validate_dna
 from protein_utils import translate
-
+from sequence_models import SequenceInfo
 
 def main():
 
@@ -29,6 +29,14 @@ def main():
     for record in records:
 
         sequence = str(record.seq)
+        info = SequenceInfo(
+    sequence_id=record.id,
+    length=len(sequence),
+    gc_percent=gc_content(sequence)
+)
+
+    print("\nSequence Summary:")
+    print(info)
 
         print("\nID:", record.id)
 
