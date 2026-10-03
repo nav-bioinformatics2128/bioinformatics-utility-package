@@ -22,3 +22,7 @@ def test_reverse_complement():
     assert reverse_complement("ATGC") == "GCAT"
     assert reverse_complement("AAAA") == "TTTT"
     assert reverse_complement("GGCC") == "GGCC"
+
+
+def test_empty_sequence():
+    assert gc_content("") == 0
