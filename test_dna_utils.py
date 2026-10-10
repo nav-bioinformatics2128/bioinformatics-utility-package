@@ -1,6 +1,6 @@
-from dna_utils import validate_dna
-from dna_utils import gc_content
-from dna_utils import reverse_complement
+from bioinformatics.dna_utils import validate_dna
+from bioinformatics.dna_utils import gc_content
+from bioinformatics.dna_utils import reverse_complement
 
 
 def test_validate_dna():
