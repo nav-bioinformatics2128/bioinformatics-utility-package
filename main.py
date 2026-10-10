@@ -1,10 +1,10 @@
 import argparse
 
 from bioinformatics.fasta_utils import read_fasta
-from bioinformatics.dna_utils import gc_content
-from bioinformatics.dna_utils import reverse_complement
-from bioinformatics.dna_utils import validate_dna
-from bioinformatics.protein_utils import translate
+from bioinformatics import gc_content
+from bioinformatics import reverse_complement
+from bioinformatics import validate_dna
+from bioinformatics import translate
 from bioinformatics.sequence_models import SequenceInfo
 
 def main():
