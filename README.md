@@ -12,24 +12,28 @@ Features
 - "find_g_bases(dna)": Filters and generates only G bases.
 - "count_g_bases(dna)": Counts the number of G bases.
 
-Example
+### Example
 
-Input:
+**Input:**
 
+```python
 dna = "AGTGC"
+```
 
-Output:
+**Output:**
 
+```text
 DNA: AGTGC
 G bases:
 G
 G
 Total G bases: 2
+```
 
-Concepts Used
+### Concepts Used
 
 - Python functions
 - For loops
 - Conditional statements
-- Generators and "yield"
+- Generators and `yield`
 - Counting with variables
